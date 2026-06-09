@@ -1,0 +1,104 @@
+.sidebar {
+  flex: 0 0 var(--sidebar-width); /* Strictly locks the width (Grow: 0, Shrink: 0, Basis: 260px) */
+  width: var(--sidebar-width);
+  height: 100vh; /* Stretches from top to bottom edge */
+  background-color: var(--bg-primary);
+  border-right: 1px solid var(--border-color);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Adds an internal scrollbar only if your menu items get too long */
+}
+
+/* ... keep your existing brandContainer, navLinks, etc. rules exactly the same below this ... */
+.brandContainer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 50px;
+}
+
+.brandIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: var(--gradient-primary); /* Aurora Gradient */
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandTitle {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.navLinks {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.navItem:hover {
+  background-color: #F3F4F6;
+  color: var(--text-main);
+}
+
+/* Specific styling for the Active state */
+.navItemActive {
+  background-color: #EEF2FF; /* Light indigo background */
+  color: var(--aurora-indigo);
+  font-weight: 700;
+}
+
+.navIcon {
+  color: inherit; /* Inherits color from .navItem or .navItemActive */
+}
+
+.bottomActions {
+  margin-top: auto;
+  border-top: 1px solid var(--border-color);
+  padding-top: 20px;
+}
+
+.logoutButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.logoutButton:hover {
+  background-color: #FEF2F2; /* Soft red background on hover */
+  color: var(--status-error);
+}
