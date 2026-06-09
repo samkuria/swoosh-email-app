@@ -1,0 +1,221 @@
+/* src/components/dashboard/MainContent.module.css */
+
+.mainContainer {
+  padding: 40px; /* Slightly larger padding for a desktop feel */
+  width: 100%; /* Forces the content to stretch edge-to-edge inside the wrapper */
+  min-height: 100%; /* Ensures the background stretches to the bottom even if the page is empty */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* ... keep all your other metricsGrid, tableCard, etc. rules exactly the same ... */
+
+/* --- Metrics Grid --- */
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.metricCard {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.metricLabel {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.metricValue {
+  font-size: 36px;
+  font-weight: 800;
+}
+
+/* Typography Colors */
+.textBlue { color: #2563EB; }
+.textGreen { color: var(--status-success); }
+.textPurple { color: #9333EA; }
+.textIndigo { color: var(--aurora-indigo); }
+
+/* --- Content Grid --- */
+.contentGrid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.tableCard, .actionsCard {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.badge {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background-color: var(--bg-secondary);
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* --- Empty State --- */
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  text-align: center;
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  background-color: #FAFAFA;
+}
+
+.emptyIconWrapper {
+  width: 64px;
+  height: 64px;
+  background-color: #EEF2FF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.emptyIcon {
+  color: var(--aurora-indigo);
+}
+
+.emptyTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.emptySubtitle {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+  max-width: 300px;
+}
+
+/* --- Buttons --- */
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: var(--gradient-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover { opacity: 0.9; }
+
+.btnOutline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 12px;
+  background-color: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnOutline:hover {
+  border-color: var(--aurora-indigo);
+  color: var(--aurora-indigo);
+  background-color: #EEF2FF;
+}
+
+.actionButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* --- Table --- */
+.tableWrapper {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th {
+  text-align: left;
+  font-size: 13px;
+  color: var(--text-muted);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+  font-weight: 700;
+}
+
+.table td {
+  padding: 16px 0;
+  font-size: 14px;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--bg-secondary);
+}
+
+.table tr:last-child td { border-bottom: none; }
+
+.fontBold { font-weight: 700; }
+.textRight { text-align: right; }
+
+.statusActive {
+  background-color: #ECFDF5;
+  color: var(--status-success);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.actionBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-muted);
+}
+
+.actionBtn:hover { color: var(--text-main); }
