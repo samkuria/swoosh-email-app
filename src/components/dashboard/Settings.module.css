@@ -1,0 +1,219 @@
+.mainContainer {
+  padding: 24px 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--text-main);
+}
+
+.header {
+  margin-bottom: 30px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 14px;
+}
+
+.settingsLayout {
+  display: flex;
+  gap: 40px;
+  background: var(--bg-card); /* Changed to variable */
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  min-height: 600px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+/* Sidebar Styling */
+.sidebar {
+  width: 280px;
+  background: var(--bg-main); /* Changed to variable */
+  padding: 24px 16px;
+  border-right: 1px solid var(--border-color);
+}
+
+.tabButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.tabButton:hover {
+  background: var(--border-color); /* Updated for dark mode compatibility */
+  color: var(--text-main);
+}
+
+.activeTab {
+  background: #ede9fe; /* Swoosh brand light purple */
+  color: #6d28d9; /* Swoosh brand deep purple */
+}
+
+.activeTab:hover {
+  background: #ede9fe;
+}
+
+/* Content Area Styling */
+.contentArea {
+  flex: 1;
+  padding: 32px 40px 40px 0;
+}
+
+.section {
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  max-width: 400px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-main);
+}
+
+.input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card); /* Important for dark mode inputs */
+  color: var(--text-main);
+  font-size: 14px;
+  transition: border-color 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #6d28d9;
+}
+
+.btnPrimary {
+  background: #6d28d9;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.btnPrimary:hover {
+  opacity: 0.9;
+}
+
+.btnDanger {
+  background: #ef4444;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: opacity 0.2s;
+}
+
+.btnDanger:hover {
+  background: #dc2626;
+}
+
+.btnOutline {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btnOutline:hover {
+  background: var(--bg-main); /* Updated for dark mode compatibility */
+}
+
+/* Legal Box */
+.legalBox {
+  background: var(--bg-main); /* Changed to variable */
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  height: 250px;
+  overflow-y: auto;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+}
+
+.legalBox h4 {
+  color: var(--text-main);
+  margin: 15px 0 5px 0;
+}
+
+/* Toggles and Selects */
+.selectInput {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card); /* Changed to variable */
+  color: var(--text-main);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.emptyState {
+  background: var(--bg-main); /* Changed to variable */
+  border: 1px dashed var(--border-color);
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 14px;
+}
